@@ -71,10 +71,15 @@ const Katalog = () => {
                 <section className="catalog-info-section">
                     <div className="catalog-info-section-top">
                         <h2 className="title pt-5 pb-3">
-                            РАСТИТЕЛЬНОЕ <br/>МАСЛО
-                            <img className="pl-2 mb-1" src={capsuleMini} alt=""/>
+                            <span data-aos="zoom-in">
+                            РАСТИТЕЛЬНОЕ <br/>
+                            </span>
+                            <span data-aos="zoom-in">
+                            МАСЛО
+                            </span>
+                            <img className="pl-2 mb-1" src={capsuleMini} alt="" data-aos="fade-right"/>
                         </h2>
-                        <p className="subtitle pb-3">
+                        <p className="subtitle pb-3" data-aos="zoom-in">
                             Растительное масло создается
                             из натуральных продуктов и
                             обладает высокой пищевой
@@ -85,7 +90,7 @@ const Katalog = () => {
                             Для приема в пищу используют
                             рафинированное и нерафинированное масло.
                         </p>
-                        <p className="subtitle">
+                        <p className="subtitle" data-aos="fade-right">
                             Нерафинированное масло обладает выраженным вкусом и
                             запахом, а также может обладать
                             небольшим осадком.
@@ -95,10 +100,10 @@ const Katalog = () => {
                             этапов очистки, чем рафинированное масло.
                         </p>
                         <div className="row mt-5 d-flex justify-content-between">
-                            <div className="col-lg-7">
+                            <div className="col-lg-7" data-aos="zoom-out-right">
                                 <img src={catalogTopCol7} alt=""/>
                             </div>
-                            <div className="col-lg-5 d-flex flex-column">
+                            <div className="col-lg-5 d-flex flex-column" data-aos="zoom-out-right">
                                 <img src={catalogTopCol5} alt=""/>
                                 <div className="row p-0 d-flex
                                 justify-content-between
@@ -115,15 +120,21 @@ const Katalog = () => {
                     </div>
                     <div className="catalog-info-section-bottom">
                         <h2 className="title pt-5 pb-3">
-                            ПОДСОЛНЕЧНОЕ <br/>МАСЛО
-                            <img className="pl-2 mb-1" src={capsuleMini} alt=""/>
+                            <span data-aos="zoom-in">
+                                ПОДСОЛНЕЧНОЕ
+                            </span>
+                            <br/>
+                            <span data-aos="zoom-in">
+                                МАСЛО
+                            </span>
+                            <img className="pl-2 mb-1" src={capsuleMini} alt="" data-aos="fade-right"/>
                         </h2>
-                        <p className="subtitle pb-3">
+                        <p className="subtitle pb-3" data-aos="zoom-in">
                             Подсолнечное масло изготавливается из особых сортов семян подсолнечника.
                             Оно содержит в себе большое количество витамина Е, который обладает полезными для организма свойствами. Оно удобно в приготовлении тем, что имеет низкую температуру застывания и не имеет
                             неприятного запаха или осадка.
                         </p>
-                        <p className="subtitle">
+                        <p className="subtitle" data-aos="zoom-in">
                             Подсолнечное масло подходит для приготовления любых задуманных блюд!
                             Оно подходит для жарки, приготовления супов, заправления салатов, а также добавления в выпечку.
                             Подсолнечное масло не содержит холестерина, поэтому не приносит вреда орзганизму.
@@ -133,16 +144,16 @@ const Katalog = () => {
                                 <div className="row p-0 d-flex
                                 justify-content-between
                                 align-items-center">
-                                    <div className="col-lg-6 pb-2">
+                                    <div className="col-lg-6 pb-2" data-aos="zoom-out-right" >
                                         <img className='pr-1' src={catalogBottomCol12Left} alt=""/>
                                     </div>
-                                    <div className="col-lg-6 pb-2">
+                                    <div className="col-lg-6 pb-2" data-aos="zoom-out-right">
                                         <img className="pl-1" src={catalogBottomCol12Right} alt=""/>
                                     </div>
                                 </div>
                                 <img src={catalogBottomCol5} alt=""/>
                             </div>
-                            <div className="col-lg-7">
+                            <div className="col-lg-7" data-aos="zoom-out-right">
                                 <img src={catalogBottomCol7} alt=""/>
                             </div>
                         </div>
@@ -326,27 +337,32 @@ const Katalog = () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </section>
                 <main>
                     <div className="catalog-info-section-top">
                         <h2 className="title pt-5 pb-3">
-                            ХЛОПКОВОЕ  <br/>МАСЛО
-                            <img className="pl-2 mb-1" src={capsuleMini} alt=""/>
+                            <span data-aos="zoom-in">
+                                ХЛОПКОВОЕ 
+                            </span>
+                            <br/>
+                            <span data-aos="zoom-in">
+                                МАСЛО
+                            </span>
+                            <img className="pl-2 mb-1" src={capsuleMini} alt="" data-aos="fade-right"/>
                         </h2>
-                        <p className="subtitle pb-3">
+                        <p className="subtitle pb-3" data-aos="zoom-in">
                             Хлопковое масло - это особое масло, которое широко распространено в Азиатских странах.
                             Оно обладает особенным вкусом и большим количеством полезных веществ и элементов.
                         </p>
-                        <p className="subtitle">
+                        <p className="subtitle" data-aos="zoom-in">
                             Такое масло используется при приготовлении восточных блюд и сладостей. Обладает коричневатым оттенком.
                         </p>
                         <div className="row mt-5 d-flex justify-content-between">
-                            <div className="col-lg-7">
+                            <div className="col-lg-7" data-aos="zoom-out-right" >
                                 <img src={catalog3Col7} alt=""/>
                             </div>
-                            <div className="col-lg-5 d-flex flex-column">
+                            <div className="col-lg-5 d-flex flex-column" data-aos="zoom-out-right">
                                 <img src={catalog3Col5} alt=""/>
                                 <div className="row p-0 d-flex
                                 justify-content-between
@@ -362,7 +378,7 @@ const Katalog = () => {
                         </div>
                     </div>
                     <div className="row d-flex justify-content-around my-5">
-                        <div className="col-lg-3 mt-3">
+                        <div className="col-lg-3 mt-3" data-aos="zoom-out-right">
                             <div className="catalog-card p-3">
                                 <div className="card-img">
                                     <img className='card-korzino' src={korzino} alt=""/>
@@ -376,7 +392,7 @@ const Katalog = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-3 mt-3">
+                        <div className="col-lg-3 mt-3" data-aos="zoom-out-right">
                             <div className="catalog-card p-3">
                                 <div className="card-img">
                                     <img className='card-korzino' src={korzino} alt=""/>
@@ -393,21 +409,27 @@ const Katalog = () => {
                     </div>
                     <div className="catalog-info-section-top">
                         <h2 className="title pt-5 pb-3">
-                            ХЛОПКОВОЕ  <br/>МАСЛО
-                            <img className="pl-2 mb-1" src={capsuleMini} alt=""/>
+                            <span data-aos="zoom-in">
+                                ХЛОПКОВОЕ 
+                            </span>
+                            <br/>
+                            <span data-aos="zoom-in">
+                                МАСЛО
+                            </span>
+                            <img className="pl-2 mb-1" src={capsuleMini} alt="" data-aos="fade-right"/>
                         </h2>
-                        <p className="subtitle pb-3">
+                        <p className="subtitle pb-3" data-aos="zoom-in">
                             Хлопковое масло - это особое масло, которое широко распространено в Азиатских странах.
                             Оно обладает особенным вкусом и большим количеством полезных веществ и элементов.
                         </p>
-                        <p className="subtitle">
+                        <p className="subtitle" data-aos="zoom-in">
                             Такое масло используется при приготовлении восточных блюд и сладостей. Обладает коричневатым оттенком.
                         </p>
                         <div className="row mt-5 d-flex justify-content-between">
-                            <div className="col-lg-7">
+                            <div className="col-lg-7" data-aos="zoom-out-right">
                                 <img src={catalog4Col7} alt=""/>
                             </div>
-                            <div className="col-lg-5 d-flex flex-column">
+                            <div className="col-lg-5 d-flex flex-column" data-aos="zoom-out-right">
                                 <img src={catalog4Col5Top} alt=""/>
                                 <div className="row p-0 ">
                                     <div className="col-lg-12 p-0 pt-2">
@@ -418,7 +440,7 @@ const Katalog = () => {
                         </div>
                     </div>
                     <div className="row d-flex justify-content-around py-5">
-                        <div className="col-lg-3 pt-3">
+                        <div className="col-lg-3 pt-3" data-aos="zoom-out-right">
                             <div className="catalog-card p-3">
                                 <div className="card-img">
                                     <img className='card-korzino' src={korzino} alt=""/>
@@ -432,7 +454,7 @@ const Katalog = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-3 mt-3">
+                        <div className="col-lg-3 mt-3" data-aos="zoom-out-right">
                             <div className="catalog-card p-3">
                                 <div className="card-img">
                                     <img className='card-korzino' src={korzino} alt=""/>
@@ -446,7 +468,7 @@ const Katalog = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-3 mt-3">
+                        <div className="col-lg-3 mt-3" data-aos="zoom-out-right">
                             <div className="catalog-card p-3">
                                 <div className="card-img">
                                     <img className='card-korzino' src={korzino} alt=""/>

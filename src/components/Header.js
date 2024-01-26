@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import '../sass/header.scss';
+import headerLogoOil from '../images/header-logo.svg'
 import capsule from '../images/header-capsule-text.svg'
 import aboutImg from "../images/header-capsule-text-mini.svg";
 import rectengleImg from "../images/squre-elemrnt.svg";
@@ -18,51 +19,78 @@ import Footer from "./Footer";
 import Application from "./Application";
 import sunFlower from '../images/sunflower.png'
 import blackSeeds from '../images/black seeds.png'
-
+import headerOilDropLeft from '../images/header oil drop left.svg'
+import headerOilDropCenter from '../images/header oil drop centre.svg'
+import headerOilDropRight from '../images/header oil drop right.svg'
 
 const Header = () => {
+
+    const [isVisible, setIsVisible] = useState(false);
+
+
+    useEffect(() => {
+        // Set isVisible to true after a delay to trigger the animation
+        const timeoutId = setTimeout(() => {
+            setIsVisible(true);
+
+        }, 500);
+        return () => clearTimeout(timeoutId);
+
+
+        const main = document.querySelector('.main')
+
+        main.addEventListener('scroll' , () => {
+            document.querySelector('.title').classList.add('show')
+        })
+
+    })
+
     return (
         <>
             <div className="home text-white">
-                <header className='header'>
+                <header className={`header ${isVisible ? 'animatedHeader' : ''}`}>
                     <Navbar/>
                     <section className='header-info'>
                         <div className="row">
                             <div className="col-7">
                                 <h1>NOBEL
                                     <span className='header-capsule'>
-                                <img className='header-capsule_img' src={capsule} alt=""/>
-                                <span className='header-text_style'>TRADE</span>
-                                </span>
+                                        <img className={`animatedBox ${isVisible ? 'appear' : ''}`} src={capsule} alt=""/>
+                                    <span className='header-text_style'>TRADE</span>
+                                    </span>
                                 </h1>
-                                <p className="subtitle">
+                                <p className={`subtitle animatedBox ${isVisible ? 'appear' : ''}`}>
                                     Компания NOBEL TRADE - крупнейший импортёр
                                     подсолнечного масла и пальмового жира  в Республику Узбекистан
                                 </p>
                             </div>
                             <div className="col-5">
-                                {/*<img src={headerLogoOil} alt=""/>*/}
+                                <img className={`imgLeft ${isVisible ? 'animatedImgLeft' : '' }`} src={headerOilDropLeft} alt=""/>
+                                <img className={`imgCenter ${isVisible ? 'animatedImgCenter' : '' }`} src={headerOilDropCenter} alt=""/>
+                                <img className={`imgRight ${isVisible ? 'animatedImgRight' : '' }`} src={headerOilDropRight} alt=""/>
                             </div>
                         </div>
                     </section>
                 </header>
                 <div className="about">
-                    <section className="main">
-                        <h3 className="title">
-                            О КОМПАНИИ
-                            <span className="about-capsule"><img className='about-img' src={aboutImg} alt=""/></span>
+                    <section className={`main`} >
+                        <h3 className={`title`} >
+                            <span className="about-capsule" data-aos="fade-up">
+                                О КОМПАНИИ
+                            </span>
+                            <img className='about-img' src={aboutImg} alt=""/>
                         </h3>
-                        <p className="subtitle">
+                        <p className="subtitle" data-aos="fade-up">
                             NOBEL TRADE является ключевым поставщиком Сухого Молока, Сыворотки,<br/>
                             Крахмала,Кукурузного и Картофельного крахмала, какао, различные крупы а также Патоки кукуруза
                             на рынок Узбекистана. <br/> Это молодое направление в бизнесе Компании,
                             но за короткое время мы уже успели завоевать доверие многих клиентов в Узбекистане.
                         </p>
                         <div className="row">
-                            <div className="col-lg-4">
+                            <div className="col-lg-4" data-aos="zoom-out-right" data-aos-anchor-placement="left-bottom"  data-aos-duration="500">
                                 <img className='card1 carded' src={oilCard} alt=""/>
                             </div>
-                            <div className="col-lg-5">
+                            <div className="col-lg-5" data-aos="zoom-out-right">
                                 <div className="col-12">
                                     <img className='card2 carded' src={top5Card} alt=""/>
                                 </div>
@@ -70,7 +98,7 @@ const Header = () => {
                                     <img className='card2 card3 carded' src={bottom5Card} alt=""/>
                                 </div>
                             </div>
-                            <div className="col-lg-3">
+                            <div className="col-lg-3" data-aos="zoom-out-right">
                                 <div className="col-12">
                                     <img className='card4 carded' src={top3CardMain} alt=""/>
                                 </div>
@@ -79,7 +107,9 @@ const Header = () => {
                                 </div>
                             </div>
                         </div>
-                        <h2><span className='rectengle-img'><img src={rectengleImg} alt=""/></span>NOBEL TRADE</h2>
+                        <h2><span className='rectengle-img'><img src={rectengleImg} alt="" data-aos="fade-right"
+                                                                 data-aos-offset="300"
+                                                                 data-aos-easing="ease-in-sine"/></span>NOBEL TRADE</h2>
                         <p className='subtitle'>
                             Основана в 2009 году и в настоящее время в компании работают 150 человек.<br/>
                             Дистрибуционная сеть компании NOBEL TRADE состоит из 12 филиалов, со своими офисами<br/>
@@ -87,9 +117,9 @@ const Header = () => {
                         </p>
                         <img className='videoplayer' src={videoPlayer} alt=""/>
                     </section>
-                    <section className="about-us">
-                        <div className="row">
-                            <div className="col-lg-4">
+                    <section className='about-us'>
+                        <div className="row" >
+                            <div className="col-lg-4" data-aos="zoom-in">
                                 <div className="card-about">
                                     <h3>15 лет</h3>
                                     <p className="subtitle">
@@ -98,7 +128,7 @@ const Header = () => {
                                     <img src={years15} alt=""/>
                                 </div>
                             </div>
-                            <div className="col-lg-4">
+                            <div className="col-lg-4" data-aos="zoom-in">
                                 <div className="card-about">
                                     <h4>12 филиалов</h4>
                                     <p className="subtitle">
@@ -107,7 +137,7 @@ const Header = () => {
                                     <img src={uzbekistanMap} alt=""/>
                                 </div>
                             </div>
-                            <div className="col-lg-4">
+                            <div className="col-lg-4" data-aos="zoom-in">
                                 <div className="card-about">
                                     <h3>8000</h3>
                                     <p className="subtitle">
@@ -116,7 +146,7 @@ const Header = () => {
                                     <img src={oil8000} alt=""/>
                                 </div>
                             </div>
-                            <div className="col-lg-12 ">
+                            <div className="col-lg-12 " data-aos="zoom-in">
                                 <div className="card-about d-flex justify-content-between py-4">
                                     <div className="col-lg-6">
                                         <img className='h-100' src={sunFlower} alt=""/>
@@ -139,7 +169,12 @@ const Header = () => {
                     </section>
                     <section className='partners'>
                         <div className="partners-page">
-                            <h2>НАШИ ПАРТНЕРЫ<span className='rectengle-img'><img src={rectengleImg} alt=""/></span></h2>
+                            <h2>
+                                <span className='rectengle-img' data-aos="fade-right">
+                                    НАШИ ПАРТНЕРЫ
+                                </span>
+                                <img src={rectengleImg} alt="" data-aos="fade-right"/>
+                            </h2>
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="card-about">
