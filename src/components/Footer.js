@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useEffect, useState} from "react";
 import arrow from "../images/arrow-top-right-large.svg";
 import footerLogo from "../images/footer-logo.svg";
 import instagram from "../images/white-instagram.svg";
@@ -6,17 +6,20 @@ import telegram from "../images/white-telegram.svg";
 import phone from "../images/phone icon.svg";
 import location from "../images/location icon.svg";
 import '../sass/footer.scss'
+import AboutModal from "./AboutModal";
 
 
 
 const Footer = () => {
+    const [aboutModal, setAboutModal] = useState(false)
+
     return (
         <>
             <footer className='footer'>
                 <div className="footer-components">
                     <div className="footer-form">
-                        <p>АКТУАЛЬНЫЕ ВАКАНСИИ В<br/> НАШЕЙ КОМПАНИИ</p>
-                        <button className='btn'>ОТПРАВИТЬ<br/>  СВОИ ДАННЫЕ <img src={arrow} alt=""/></button>
+                        <p className={`subtitle`}>АКТУАЛЬНЫЕ ВАКАНСИИ В<br/> НАШЕЙ КОМПАНИИ</p>
+                        <button className='btn' onClick={() => setAboutModal(true)}>ОТПРАВИТЬ<br/> СВОИ ДАННЫЕ <img src={arrow} alt=""/></button>
                     </div>
                     <div className="footer-navigate">
                         <div className="row">
@@ -56,6 +59,7 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
+            <AboutModal modalActive={aboutModal} setModalActive={setAboutModal}/>
         </>
     )
 }

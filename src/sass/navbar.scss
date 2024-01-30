@@ -1,11 +1,20 @@
 .navbar {
+  height: 180px;
+  @media only screen and (max-width: 500px) {
+    height: 80px;
+    padding-top: 30px;
+    margin-bottom: 15px;
+  }
   .headerImg {
-    width: 170px;
-    height: 170px;
+    width: 100%;
+    height: auto;
   }
   .collapse {
     display: flex;
     justify-content: flex-end;
+    @media only screen and (max-width: 500px) {
+      display: none;
+    }
     .navbar-nav {
       font-family: Montserrat;
       font-size: 20px;
@@ -25,9 +34,9 @@
     }
     .changeLanguage {
       position: absolute;
-      top: 30px;
+      top: 25px;
       right: 16px;
-      width: 88px;
+      width: 115px;
       height: 38px;
       stroke-width: 0.806px;
       stroke: #FFF;
@@ -55,14 +64,21 @@
         margin-right: 3.55px;
       }
 
-      .rus,.uzb {
+      .eng {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #AEAEAE !important;
+        margin-right: 3.55px;
+      }
+      .rus,.uzb,.eng {
         color: #545454;
         font-family: Montserrat;
-        font-size: 16.938px;
+        font-size: 13.8px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
-        letter-spacing: -0.847px;
+        letter-spacing: -0.69px;
         padding-bottom: 2px;
       }
     }

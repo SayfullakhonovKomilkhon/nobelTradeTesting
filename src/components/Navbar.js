@@ -3,6 +3,7 @@ import '../sass/navbar.scss'
 import logo from "../images/logo.svg";
 import {Link} from "react-router-dom";
 import {createBrowserHistory} from "history";
+import burgerMenu from '../images/burger-menu.svg'
 
 
 const Navbar = () => {
@@ -14,7 +15,7 @@ const Navbar = () => {
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                         aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                    <img src={burgerMenu} alt=""/>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <ul className="navbar-nav">
@@ -29,6 +30,7 @@ const Navbar = () => {
                     <div className="changeLanguage">
                         <div className="rus">rus</div>
                         <div className="uzb">uzb</div>
+                        <div className="eng">eng</div>
                     </div>
                 </div>
             </nav>

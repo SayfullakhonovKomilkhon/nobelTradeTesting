@@ -27,7 +27,6 @@ const Header = () => {
 
     const [isVisible, setIsVisible] = useState(false);
 
-
     useEffect(() => {
         // Set isVisible to true after a delay to trigger the animation
         const timeoutId = setTimeout(() => {
@@ -52,9 +51,9 @@ const Header = () => {
                     <Navbar/>
                     <section className='header-info'>
                         <div className="row">
-                            <div className="col-7">
+                            <div className="col-lg-7 col-md-12">
                                 <h1>NOBEL
-                                    <span className='header-capsule'>
+                                    <span className='header-capsule d-flex align-items-center'>
                                         <img className={`animatedBox ${isVisible ? 'appear' : ''}`} src={capsule} alt=""/>
                                     <span className='header-text_style'>TRADE</span>
                                     </span>
@@ -64,7 +63,7 @@ const Header = () => {
                                     подсолнечного масла и пальмового жира  в Республику Узбекистан
                                 </p>
                             </div>
-                            <div className="col-5">
+                            <div className="col-lg-5 col-md-12">
                                 <img className={`imgLeft ${isVisible ? 'animatedImgLeft' : '' }`} src={headerOilDropLeft} alt=""/>
                                 <img className={`imgCenter ${isVisible ? 'animatedImgCenter' : '' }`} src={headerOilDropCenter} alt=""/>
                                 <img className={`imgRight ${isVisible ? 'animatedImgRight' : '' }`} src={headerOilDropRight} alt=""/>
@@ -76,9 +75,9 @@ const Header = () => {
                     <section className={`main`} >
                         <h3 className={`title`} >
                             <span className="about-capsule" data-aos="fade-up">
-                                О КОМПАНИИ
+                                О  КОМПАНИИ
                             </span>
-                            <img className='about-img' src={aboutImg} alt=""/>
+                            <img className='about-img d-flex align-items-center' src={aboutImg} alt=""/>
                         </h3>
                         <p className="subtitle" data-aos="fade-up">
                             NOBEL TRADE является ключевым поставщиком Сухого Молока, Сыворотки,<br/>
@@ -87,7 +86,7 @@ const Header = () => {
                             но за короткое время мы уже успели завоевать доверие многих клиентов в Узбекистане.
                         </p>
                         <div className="row">
-                            <div className="col-lg-4" data-aos="zoom-out-right" data-aos-anchor-placement="left-bottom"  data-aos-duration="500">
+                            <div className="col-lg-4 col-md-12" data-aos="zoom-out-right" data-aos-anchor-placement="left-bottom"  data-aos-duration="500">
                                 <img className='card1 carded' src={oilCard} alt=""/>
                             </div>
                             <div className="col-lg-5" data-aos="zoom-out-right">
@@ -148,11 +147,11 @@ const Header = () => {
                             </div>
                             <div className="col-lg-12 " data-aos="zoom-in">
                                 <div className="card-about d-flex justify-content-between py-4">
-                                    <div className="col-lg-6">
+                                    <div className="col-lg-6 col-md-12">
                                         <img className='h-100' src={sunFlower} alt=""/>
                                     </div>
-                                    <div className="col-lg-6">
-                                        <img src={blackSeeds} alt=""/>
+                                    <div className="col-lg-6 col-md-12">
+                                        <img className={`blackSeed`} src={blackSeeds} alt=""/>
                                         <p className="subtitle">
                                             суммарная производственная мощность предприятий компаний
                                         </p>
@@ -162,6 +161,7 @@ const Header = () => {
                                         <p className="subtitle">
                                             переработки семян подсолнуха
                                         </p>
+                                        <img className={`blackSeed-media`} src={blackSeeds} alt=""/>
                                     </div>
                                 </div>
                             </div>
@@ -184,22 +184,22 @@ const Header = () => {
                             </div>
                             <h3>ДОЧЕРНИЕ КОМПАНИИ</h3>
                             <div className="row">
-                                <div className="col-lg-3">
+                                <div className="col-lg-3 col-md-6">
                                     <div className="partners-card">
 
                                     </div>
                                 </div>
-                                <div className="col-lg-3">
+                                <div className="col-lg-3 col-md-6">
                                     <div className="partners-card">
 
                                     </div>
                                 </div>
-                                <div className="col-lg-3">
+                                <div className="col-lg-3 col-md-6">
                                     <div className="partners-card">
 
                                     </div>
                                 </div>
-                                <div className="col-lg-3">
+                                <div className="col-lg-3 col-md-6">
                                     <div className="partners-card">
 
                                     </div>
