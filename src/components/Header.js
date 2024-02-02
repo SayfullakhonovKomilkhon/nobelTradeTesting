@@ -24,7 +24,7 @@ import headerOilDropCenter from '../images/header oil drop centre.svg'
 import headerOilDropRight from '../images/header oil drop right.svg'
 
 const Header = () => {
-
+    const [menuActive, setMenuActive] = useState(false)
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -48,7 +48,7 @@ const Header = () => {
         <>
             <div className="home text-white">
                 <header className={`header ${isVisible ? 'animatedHeader' : ''}`}>
-                    <Navbar/>
+                    <Navbar active={menuActive} setActive={setMenuActive}/>
                     <section className='header-info'>
                         <div className="row">
                             <div className="col-lg-7 col-md-12">

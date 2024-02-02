@@ -23,7 +23,7 @@ const Footer = () => {
                     </div>
                     <div className="footer-navigate">
                         <div className="row">
-                            <div className="col-lg-4 main">
+                            <div className="col-lg-4 col-md-6 col-sm-6 main">
                                 <img src={footerLogo} alt=""/>
                                 <ul className='navbar'>
                                     <li className='nav-item nav-link'>ГЛАВНАЯ</li>
@@ -32,14 +32,14 @@ const Footer = () => {
                                     <li className='nav-item nav-link'>НАШИ ПРЕИМУЩЕСТВА</li>
                                 </ul>
                             </div>
-                            <div className="col-lg-2 main-part">
+                            <div className="col-lg-2 col-md-6 col-sm-6 main-part">
                                 <ul className='navbar'>
                                     <li className='nav-item nav-link'>КАТАЛОГ</li>
                                     <li className='nav-item nav-link'>ВАКАНСИИ</li>
                                     <li className='nav-item nav-link'>КОНТАКТЫ</li>
                                 </ul>
                             </div>
-                            <div className="col-lg-6">
+                            <div className="col-lg-6 col-md-12 col-sm-12">
                                 <div className="footer-socials">
                                     <img src={instagram} alt=""/>
                                     <img src={telegram} alt=""/>
@@ -54,6 +54,9 @@ const Footer = () => {
                                         г. Ташкент, Кичик Халка Йули 4
                                     </p>
                                 </div>
+                            </div>
+                            <div className="col-lg-12">
+                                <h6>©2024 Nobel Trade. All rights reserved.</h6>
                             </div>
                         </div>
                     </div>

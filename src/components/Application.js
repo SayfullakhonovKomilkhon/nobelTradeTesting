@@ -14,9 +14,11 @@ const Application = () => {
                     <p className="subtitle">
                         CТАНОВИТЕСЬ ПАРТНЕРАМИ И<br/> РАЗВИВАЙТЕСЬ ВМЕСТЕ С
                     </p>
-                    <button className='btn open-btn' onClick={() => setApplicationModal(true)}>ОТПРАВИТЬ ЗАЯВКУ <img src={arrow} alt=""/></button>
+                    <button className='button-lg btn open-btn' onClick={() => setApplicationModal(true)}>ОТПРАВИТЬ ЗАЯВКУ <img src={arrow} alt=""/></button>
                 </div>
                 <p className='main-text'>NOBEL TRADE</p>
+                <button className='button-md btn open-btn' onClick={() => setApplicationModal(true)}>ОТПРАВИТЬ ЗАЯВКУ <img src={arrow} alt=""/></button>
+                <div className="pb-5"></div>
             </div>
             <ApplicationModal active={applicationModalActive} setActive={setApplicationModal}/>
         </>

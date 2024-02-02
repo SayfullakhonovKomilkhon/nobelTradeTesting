@@ -1,20 +1,32 @@
 .navbar {
   height: 180px;
+  background-color: transparent;
+  box-shadow: none;
   @media only screen and (max-width: 500px) {
     height: 80px;
     padding-top: 30px;
     margin-bottom: 15px;
   }
+  .navbar-toggler {
+    border: none;
+  }
+  .navbar-toggler:focus {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
   .headerImg {
     width: 100%;
     height: auto;
   }
+  .nav-collapse {
+    @media only screen and (max-width: 500px) {
+      display: none !important;
+    }
+  }
   .collapse {
     display: flex;
     justify-content: flex-end;
-    @media only screen and (max-width: 500px) {
-      display: none;
-    }
     .navbar-nav {
       font-family: Montserrat;
       font-size: 20px;
