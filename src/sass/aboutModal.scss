@@ -1,11 +1,17 @@
 .modal {
+  background-color: transparent;
   .modal-info {
-    margin-top: 5% !important;
+    margin-top: 10% !important;
   }
   .modal-dialog {
 
     .modal-height {
       height: 570px;
+      .modal-body {
+        .modal-form-textarea {
+          max-width: 452px;
+        }
+      }
     }
     .modal-content {
 

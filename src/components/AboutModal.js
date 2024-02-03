@@ -49,7 +49,7 @@ const AboutModal = ({modalActive,setModalActive}) =>{
 
                                 <input className={`modal-form-info form-control`} type="text" placeholder='ФИО'/>
                                 <input className={`modal-form-phoneNumber modal-form-info form-control`} type="tel" placeholder='Номер телефона'/>
-                                <textarea className={`modal-form-textarea modal-form-info form-control`} name="" id="" cols="30" rows="10" placeholder='Ваш комментарий'></textarea>
+                                <textarea className={`modal-form-textarea form-control`} name="" id="" cols="30" rows="10" placeholder='Ваш комментарий'></textarea>
                                 <div className="d-grid">
                                     <button className={`modal-form-btn btn`}>ОТПРАВИТЬ ЗАЯВКУ</button>
                                 </div>

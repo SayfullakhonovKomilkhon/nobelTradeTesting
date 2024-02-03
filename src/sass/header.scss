@@ -2,9 +2,7 @@
 @font-face {
   font-family: Suissie Intl;
   src: url("../fonts/Suisse Intl/SuisseIntl-Book.otf");
-
 }
-
 
 
 #root {
@@ -28,7 +26,7 @@
     background-color: #000;
     max-width: 100%;
     background-image: url("../images/header-background.png");
-    max-height: 100vh !important;
+    height: 100vh !important;
     background-position-x: 400px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -116,7 +114,7 @@
             top: 0px;
             z-index: 1;
             @media only screen and (max-width: 500px) {
-              right: 185px !important;
+              right: 155px !important;
               opacity: 0;
             }
           }
@@ -143,7 +141,7 @@
             @media only screen and (max-width: 500px) {
               width: 164px !important;
               height: 249px !important;
-              right: 135px !important;
+              right: 105px !important;
               top: 45px !important;
               opacity: 0;
               transform: rotate(0deg) !important;
@@ -170,7 +168,7 @@
             top: 100px;
             z-index: 2;
             @media only screen and (max-width: 500px) {
-              right: 85px !important;
+              right: 55px !important;
               top: 80px !important;
               opacity: 0;
             }

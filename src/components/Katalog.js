@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import '../sass/katalog.scss'
 import Navbar from "./Navbar";
 import capsule from '../images/header-capsule-text.svg'
@@ -25,12 +25,14 @@ import catalog4Col7 from '../images/catalog4-col-7.png'
 import catalog4Col5Top from '../images/catalog4-col-5-top.png'
 import catalog4Col5Bottom from '../images/catalog4-col-5-bottom.png'
 import catalogBgVideo from '../images/catalog-video.mp4'
+import CatalogModal from "./CatalogModal";
 
 
 
 
 
 const Katalog = () => {
+    const [activeModal, setActiveModal] = useState(false)
     return (
         <>
             <div className="catalog text-white">
@@ -171,7 +173,22 @@ const Katalog = () => {
                                     </div>
                                     <h3 className="text-center mt-3">Rimado</h3>
                                     <div className="card-button d-flex align-items-center">
-                                        <button className='btn text-white' type={"button"}>
+                                        <button className='btn text-white' type={"button"} onClick={() => setActiveModal(true)}>
+                                            подробнее
+                                        </button>
+                                        <img className='' src={arrow} alt=""/>
+                                    </div>
+                                </div>
+                            </div>
+                            <CatalogModal active={activeModal} setActive={setActiveModal}/>
+                            <div className="col-lg-3 mt-3">
+                                <div className="catalog-card p-3">
+                                    <div className="card-img">
+                                        <img className='card-korzino' src={korzino} alt=""/>
+                                    </div>
+                                    <h3 className="text-center mt-3">Rimado</h3>
+                                    <div className="card-button d-flex align-items-center">
+                                        <button className='btn text-white' type={"button"} onClick={() => setActiveModal(true)}>
                                             подробнее
                                         </button>
                                         <img className='' src={arrow} alt=""/>
@@ -185,7 +202,7 @@ const Katalog = () => {
                                     </div>
                                     <h3 className="text-center mt-3">Rimado</h3>
                                     <div className="card-button d-flex align-items-center">
-                                        <button className='btn text-white' type={"button"}>
+                                        <button className='btn text-white' type={"button"} onClick={() => setActiveModal(true)}>
                                             подробнее
                                         </button>
                                         <img className='' src={arrow} alt=""/>
@@ -199,21 +216,7 @@ const Katalog = () => {
                                     </div>
                                     <h3 className="text-center mt-3">Rimado</h3>
                                     <div className="card-button d-flex align-items-center">
-                                        <button className='btn text-white' type={"button"}>
-                                            подробнее
-                                        </button>
-                                        <img className='' src={arrow} alt=""/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 mt-3">
-                                <div className="catalog-card p-3">
-                                    <div className="card-img">
-                                        <img className='card-korzino' src={korzino} alt=""/>
-                                    </div>
-                                    <h3 className="text-center mt-3">Rimado</h3>
-                                    <div className="card-button d-flex align-items-center">
-                                        <button className='btn text-white' type={"button"}>
+                                        <button className='btn text-white' type={"button"} onClick={() => setActiveModal(true)}>
                                             подробнее
                                         </button>
                                         <img className='' src={arrow} alt=""/>
@@ -229,7 +232,7 @@ const Katalog = () => {
                                     </div>
                                     <h3 className="text-center mt-3">Rimado</h3>
                                     <div className="card-button d-flex align-items-center">
-                                        <button className='btn text-white' type={"button"}>
+                                        <button className='btn text-white' type={"button"} onClick={() => setActiveModal(true)}>
                                             подробнее
                                         </button>
                                         <img className='' src={arrow} alt=""/>
@@ -243,7 +246,7 @@ const Katalog = () => {
                                     </div>
                                     <h3 className="text-center mt-3">Rimado</h3>
                                     <div className="card-button d-flex align-items-center">
-                                        <button className='btn text-white' type={"button"}>
+                                        <button className='btn text-white' type={"button"} onClick={() => setActiveModal(true)}>
                                             подробнее
                                         </button>
                                         <img className='' src={arrow} alt=""/>
@@ -257,7 +260,7 @@ const Katalog = () => {
                                     </div>
                                     <h3 className="text-center mt-3">Rimado</h3>
                                     <div className="card-button d-flex align-items-center">
-                                        <button className='btn text-white' type={"button"}>
+                                        <button className='btn text-white' type={"button"} onClick={() => setActiveModal(true)}>
                                             подробнее
                                         </button>
                                         <img className='' src={arrow} alt=""/>
@@ -271,7 +274,7 @@ const Katalog = () => {
                                     </div>
                                     <h3 className="text-center mt-3">Rimado</h3>
                                     <div className="card-button d-flex align-items-center">
-                                        <button className='btn text-white' type={"button"}>
+                                        <button className='btn text-white' type={"button"} onClick={() => setActiveModal(true)}>
                                             подробнее
                                         </button>
                                         <img className='' src={arrow} alt=""/>
@@ -287,7 +290,7 @@ const Katalog = () => {
                                     </div>
                                     <h3 className="text-center mt-3">Rimado</h3>
                                     <div className="card-button d-flex align-items-center">
-                                        <button className='btn text-white' type={"button"}>
+                                        <button className='btn text-white' type={"button"} onClick={() => setActiveModal(true)}>
                                             подробнее
                                         </button>
                                         <img className='' src={arrow} alt=""/>
@@ -301,7 +304,7 @@ const Katalog = () => {
                                     </div>
                                     <h3 className="text-center mt-3">Rimado</h3>
                                     <div className="card-button d-flex align-items-center">
-                                        <button className='btn text-white' type={"button"}>
+                                        <button className='btn text-white' type={"button"} onClick={() => setActiveModal(true)}>
                                             подробнее
                                         </button>
                                         <img className='' src={arrow} alt=""/>
@@ -315,7 +318,7 @@ const Katalog = () => {
                                     </div>
                                     <h3 className="text-center mt-3">Rimado</h3>
                                     <div className="card-button d-flex align-items-center">
-                                        <button className='btn text-white' type={"button"}>
+                                        <button className='btn text-white' type={"button"} onClick={() => setActiveModal(true)}>
                                             подробнее
                                         </button>
                                         <img className='' src={arrow} alt=""/>
@@ -329,7 +332,7 @@ const Katalog = () => {
                                     </div>
                                     <h3 className="text-center mt-3">Rimado</h3>
                                     <div className="card-button d-flex align-items-center">
-                                        <button className='btn text-white' type={"button"}>
+                                        <button className='btn text-white' type={"button"} onClick={() => setActiveModal(true)}>
                                             подробнее
                                         </button>
                                         <img className='' src={arrow} alt=""/>
@@ -379,16 +382,18 @@ const Katalog = () => {
                     </div>
                     <div className="row d-flex justify-content-around my-5">
                         <div className="col-lg-3 mt-3" data-aos="zoom-out-right">
-                            <div className="catalog-card p-3">
-                                <div className="card-img">
-                                    <img className='card-korzino' src={korzino} alt=""/>
-                                </div>
-                                <h3 className="text-center mt-3">Rimado</h3>
-                                <div className="card-button d-flex align-items-center">
-                                    <button className='btn text-white' type={"button"}>
-                                        подробнее
-                                    </button>
-                                    <img className='' src={arrow} alt=""/>
+                            <div className="col-lg-3 mt-3">
+                                <div className="catalog-card p-3">
+                                    <div className="card-img">
+                                        <img className='card-korzino' src={korzino} alt=""/>
+                                    </div>
+                                    <h3 className="text-center mt-3">Rimado</h3>
+                                    <div className="card-button d-flex align-items-center">
+                                        <button className='btn text-white' type={"button"} onClick={() => setActiveModal(true)}>
+                                            подробнее
+                                        </button>
+                                        <img className='' src={arrow} alt=""/>
+                                    </div>
                                 </div>
                             </div>
                         </div>

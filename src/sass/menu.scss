@@ -194,12 +194,13 @@
   };
 
 }
-.activeTab {
-  transform: translateX(-0%);
-transition: 1s;
-}
 
-.hide {
-  visibility: hidden;
-  transition: 1s;
+@media only screen and (max-width: 500px) {
+  .activeTab {
+    transform: translateX(-0%);
+  }
+  .hide {
+    visibility: hidden;
+
+  }
 }

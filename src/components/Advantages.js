@@ -54,16 +54,20 @@ const Advantages = () => {
                     </div>
                     <div className="row">
                         <div className="col-lg-6 text-left" data-aos="zoom-out-left">
-                            <h4>СОБСТВЕННЫЙ  CALL-CENTER <img src={capsuleMini} alt=""/></h4>
+                            <h4>СОБСТВЕННЫЙ <br/> CALL-CENTER <img src={capsuleMini} alt=""/></h4>
                             <p className='subtitle'>позволяет компании осуществлять качественный сервис своим клиентам и конечным потребителям.</p>
                         </div>
                         <div className="col-lg-6" data-aos="zoom-out-right">
                             <img className='half-img' src={callCenter} alt=""/>
                         </div>
+                        <div className="col-lg-6 title-show text-right mt-5 " data-aos="zoom-out-right">
+                            <h4 className=''>У НАШЕЙ<br/> <img src={capsuleMini} alt=""/>КОМПАНИИ</h4>
+                            <p className='subtitle'>организован свой дистрибьюторский бизнес  в Афганистане, куда привлечены свои собственные  специалисты из Узбекистана. </p>
+                        </div>
                         <div className="col-lg-6 mt-5" data-aos="zoom-out-left">
                             <img className='half-img' src={partners } alt=""/>
                         </div>
-                        <div className="col-lg-6 text-right mt-5 " data-aos="zoom-out-right">
+                        <div className="col-lg-6 title-hide text-right mt-5 " data-aos="zoom-out-right">
                             <h4 className=''>У НАШЕЙ<br/> <img src={capsuleMini} alt=""/>КОМПАНИИ</h4>
                             <p className='subtitle'>организован свой дистрибьюторский бизнес  в Афганистане, куда привлечены свои собственные  специалисты из Узбекистана. </p>
                         </div>
@@ -79,11 +83,11 @@ const Advantages = () => {
                     <p className='subtitle'>Которая входит в состав группы компаний Nobel, осуществляет международные перевозки в разные направления.  Она одна из немногих компаний, которая имеет транспортный коридор в Афганистане.</p>
                     <img className="advantages-truck" src={advantagesSectionTruck} alt="" data-aos="zoom-in-up"/>
                     <h3 className='workers'>
-                        <span data-aos="zoom-in">СОТРУДНИКИ КОМПАНИИ  NOBEL TRADE </span>
+                        <span data-aos="zoom-in">СОТРУДНИКИ КОМПАНИИ <br/>NOBEL TRADE </span>
                         <img className="rectangle" src={advantagesRectangle} alt="" data-aos="fade-right"/>
                     </h3>
                     <p className="subtitle" data-aos="zoom-in">в сплочённой командной работе, эффективно решают любые задачи, вне зависимости от сложности</p>
-                    <img className='w-100' src={nobelTradeVideo} alt="" data-aos="zoom-in-up"/>
+                    <img className='w-100 mb-3' src={nobelTradeVideo} alt="" data-aos="zoom-in-up"/>
 
                 </section>
                 <div className="application-part">

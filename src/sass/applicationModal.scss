@@ -1,4 +1,5 @@
 .modal {
+  min-height: 100vh !important;
   .modal-dialog {
     margin-top: 10px !important;
     margin-bottom: 0;
@@ -7,7 +8,7 @@
       height: 700px;
       background: rgba(0, 0, 0, 0.85);
       .modal-body{
-        padding: 37px;
+        padding: 25px !important;
         .form-modal-title {
           color: var(--icon-color, #FFF);
           font-family: Montserrat;
@@ -18,7 +19,12 @@
           letter-spacing: -1.292px;
         }
         form {
-
+          [type="checkbox"]:not(:checked),
+          [type="checkbox"]:checked {
+            position: relative;
+            opacity: 1;
+            pointer-events: auto;
+          }
         }
       }
     }
@@ -66,15 +72,20 @@
 }
 .modal-form-textarea {
   height: 130px;
+  max-width: 452px !important;
   display: flex;
   align-items: flex-start;
+  border-radius: 11.435px;
 }
 
 .modal-form-textarea::placeholder {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin-bottom: auto;
+  color: #B0B0B0;
+  font-family: Montserrat;
+  font-size: 17.471px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.874px;
 }
 
 .modal-form-info::placeholder {
@@ -88,13 +99,16 @@
 }
 
 .form-control {
-  margin-bottom: 25px;
+  margin-bottom: 25px !important;
   font-family: Montserrat;
-  font-size: 17.471px;
+  font-size: 17.471px !important;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.874px;
+  border-radius: 11.4px !important;
+  background-color: #fff !important;
+  padding-left: 10px;
 }
 
 .form-check-input {
@@ -149,4 +163,10 @@
   border: none;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.modal-form-phoneNumber::placeholder,
+.modal-form-info::placeholder{
+  padding-left: 15px;
+  margin-left: 15px;
 }
