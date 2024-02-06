@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import '../sass/header.scss';
 import headerLogoOil from '../images/header-logo.svg'
 import capsule from '../images/header-capsule-text.svg'
@@ -22,6 +22,14 @@ import blackSeeds from '../images/black seeds.png'
 import headerOilDropLeft from '../images/header oil drop left.svg'
 import headerOilDropCenter from '../images/header oil drop centre.svg'
 import headerOilDropRight from '../images/header oil drop right.svg'
+import Flickity from "react-flickity-component";
+import '../sass/flickitySlider.scss'
+import carouselCard1 from '../images/carousel-card1.png'
+import carouselCard2 from '../images/carousel-card2.png'
+import carouselCard3 from '../images/carousel-card3.png'
+import carouselCard4 from '../images/carousel-card4.png'
+import carouselCard5 from '../images/carousel-card5.png'
+import ReactPlayer from "react-player";
 
 const Header = () => {
     const [menuActive, setMenuActive] = useState(false)
@@ -44,6 +52,32 @@ const Header = () => {
 
     })
 
+    const flickityOtions = {
+        initialIndex: 0
+    }
+    const videoRef = useRef(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [currentTime, setCurrentTime] = useState(0);
+
+    const togglePlay = () => {
+        if (videoRef.current.paused) {
+            videoRef.current.play();
+            setIsPlaying(true);
+        } else {
+            videoRef.current.pause();
+            setIsPlaying(false);
+        }
+    };
+
+    const updateTime = () => {
+        setCurrentTime(videoRef.current.currentTime);
+    };
+
+    const formatTime = (seconds) => {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = Math.floor(seconds % 60);
+        return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+    };
     return (
         <>
             <div className="home text-white">
@@ -106,6 +140,20 @@ const Header = () => {
                                 </div>
                             </div>
                         </div>
+                        <Flickity
+                        className={'carousel'}
+                        elementType={'div'}
+                        options={flickityOtions}
+                        disableImagesLoaded={false}
+                        reloadOnUpdate
+                        static
+                        >
+                            <img className={`carded me-4`} src={carouselCard1} alt=""/>
+                            <img className={`carded me-4`} src={carouselCard2} alt=""/>
+                            <img className={`carded me-4`} src={carouselCard3} alt=""/>
+                            <img className={`carded me-4`} src={carouselCard4} alt=""/>
+                            <img className={`carded me-4`} src={carouselCard5} alt=""/>
+                        </Flickity>
                         <h2><span className='rectengle-img'><img src={rectengleImg} alt="" data-aos="fade-right"
                                                                  data-aos-offset="300"
                                                                  data-aos-easing="ease-in-sine"/></span>NOBEL TRADE</h2>

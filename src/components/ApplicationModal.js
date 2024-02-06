@@ -55,7 +55,7 @@ const ApplicationModal = ({active, setActive}) => {
                                     </AccordionDetails>
                                 </Accordion>
 
-                                <input className={`modal-form-info form-control`} type="text" placeholder='ФИО'/>
+                                <input className={`modal-form-info modal-absolute form-control`} type="text" placeholder='ФИО'/>
                                 <input className={`modal-form-phoneNumber modal-form-info form-control`} type="tel" placeholder='Номер телефона'/>
                                 <input className={`modal-form-company modal-form-info form-control`} type="text" placeholder='Название вашей компании'/>
                                 <input className={`modal-form-email modal-form-info form-control`} type="email" placeholder='E-mail'/>

@@ -1,8 +1,18 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
 .footer {
   background-image: url("../images/footer-background.png");
   background-size: inherit;
   background-position: center;
   background-repeat: no-repeat;
+  height: 780px;
+  margin: 0;
+  padding: 0;
   @media only screen and (max-width: 500px) {
     height: 570px;
     width: 100%;

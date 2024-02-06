@@ -111,10 +111,12 @@ const Katalog = () => {
                                 justify-content-between
                                 align-items-center">
                                     <div className="col-lg-6 pt-2">
-                                        <img className='pr-1' src={catalogTopCol12Left} alt=""/>
+                                        <img className='' src={catalogTopCol12Left} alt=""/>
+
                                     </div>
-                                    <div className="col-lg-6 pt-2">
-                                        <img className="pl-1" src={catalogTopCol12Right} alt=""/>
+                                    <div className="col-lg-6 pt-2 d-flex ">
+                                        <div className="me-2"></div>
+                                        <img className="" src={catalogTopCol12Right} alt=""/>
                                     </div>
                                 </div>
                             </div>
@@ -147,10 +149,11 @@ const Katalog = () => {
                                 justify-content-between
                                 align-items-center">
                                     <div className="col-lg-6 pb-2" data-aos="zoom-out-right" >
-                                        <img className='pr-1' src={catalogBottomCol12Left} alt=""/>
+                                        <img className='' src={catalogBottomCol12Left} alt=""/>
                                     </div>
-                                    <div className="col-lg-6 pb-2" data-aos="zoom-out-right">
-                                        <img className="pl-1" src={catalogBottomCol12Right} alt=""/>
+                                    <div className="col-lg-6 pb-2 d-flex" data-aos="zoom-out-right">
+                                        <div className="me-2"></div>
+                                        <img className="" src={catalogBottomCol12Right} alt=""/>
                                     </div>
                                 </div>
                                 <img src={catalogBottomCol5} alt=""/>
@@ -373,7 +376,8 @@ const Katalog = () => {
                                     <div className="col-lg-6 pt-2">
                                         <img className='pr-1' src={catalog3Col6Left} alt=""/>
                                     </div>
-                                    <div className="col-lg-6 pt-2">
+                                    <div className="col-lg-6 pt-2 d-flex">
+                                        <div className="me-2"></div>
                                         <img className="pl-1" src={catalog3Col6Right} alt=""/>
                                     </div>
                                 </div>

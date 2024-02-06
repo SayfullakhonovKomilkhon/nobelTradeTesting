@@ -58,11 +58,11 @@ const Footer = () => {
                             <div className="col-lg-12">
                                 <h6>©2024 Nobel Trade. All rights reserved.</h6>
                             </div>
+                            <AboutModal modalActive={aboutModal} setModalActive={setAboutModal}/>
                         </div>
                     </div>
                 </div>
             </footer>
-            <AboutModal modalActive={aboutModal} setModalActive={setAboutModal}/>
         </>
     )
 }

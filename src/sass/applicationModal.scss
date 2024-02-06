@@ -1,5 +1,6 @@
 .modal {
   min-height: 100vh !important;
+
   .modal-dialog {
     margin-top: 10px !important;
     margin-bottom: 0;
@@ -7,6 +8,7 @@
       width: 527px;
       height: 700px;
       background: rgba(0, 0, 0, 0.85);
+      position: relative;
       .modal-body{
         padding: 25px !important;
         .form-modal-title {
@@ -17,6 +19,12 @@
           font-weight: 600;
           line-height: normal;
           letter-spacing: -1.292px;
+        }
+        .modal-absolute {
+          margin-top: 20% !important;
+        }
+        .modal-form-textarea {
+          width: 427px !important;
         }
         form {
           [type="checkbox"]:not(:checked),
@@ -108,8 +116,8 @@
   letter-spacing: -0.874px;
   border-radius: 11.4px !important;
   background-color: #fff !important;
-  padding-left: 10px;
-  width: 427px;
+  padding-left: 15px !important;
+  width: 412px !important;
 }
 
 .form-check-input {
@@ -129,13 +137,30 @@
   border-radius: 50%;
   font-size: 10px;
 }
-.css-1c35hjw-MuiPaper-root-MuiAccordion-root:first-of-type {
+//.css-1c35hjw-MuiPaper-root-MuiAccordion-root:first-of-type {
+//
+//}
+
+.MuiPaper-root{
   border-radius: 11.435px !important;
-  margin: 25px 0;
+  margin: 25px 0 !important;
+  position: absolute !important;
+  top: 11% !important;
+  width: 427px;
+}
+.css-1wz20g3 {
+  border-radius: 11.4px !important;
 }
 .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
   box-shadow: 1.969px -2.461px 16.931px -5.414px rgba(0, 0, 0, 0.49) !important;
 }
+
+.form-check-label {
+  font-family: Montserrat;
+  font-weight: 500;
+  color: #000 !important;
+}
+
 .MuiSvgIcon-root {
   width: 18px;
   height: 18px;
@@ -168,6 +193,6 @@
 
 .modal-form-phoneNumber::placeholder,
 .modal-form-info::placeholder{
-  padding-left: 15px;
-  margin-left: 15px;
+  padding-left: 0px;
+  margin-left: 35px;
 }

@@ -9,7 +9,7 @@
       height: 570px;
       .modal-body {
         .modal-form-textarea {
-          max-width: 427px;
+          width: 427px !important;
         }
       }
     }
@@ -17,4 +17,8 @@
 
     }
   }
+}
+
+.accordion-position {
+  top: 15% !important;
 }

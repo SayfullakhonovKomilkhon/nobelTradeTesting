@@ -18,7 +18,7 @@ const AboutModal = ({modalActive,setModalActive}) =>{
                         <div className="modal-body">
                             <h5 className={`form-modal-title`}>ВВЕДИТЕ ВАШИ ДАННЫЕ ДЛЯ ОТКЛИКА НА ВАКАНСИЮ </h5>
                             <form action="">
-                                <Accordion>
+                                <Accordion className="accordion-position">
                                     <AccordionSummary
                                         expandIcon={<ExpandMoreIcon />}
                                         aria-controls="panel1-content"
@@ -47,7 +47,7 @@ const AboutModal = ({modalActive,setModalActive}) =>{
                                     </AccordionDetails>
                                 </Accordion>
 
-                                <input className={`modal-form-info form-control`} type="text" placeholder='ФИО'/>
+                                <input className={`modal-form-info modal-absolute form-control`} type="text" placeholder='ФИО'/>
                                 <input className={`modal-form-phoneNumber modal-form-info form-control`} type="tel" placeholder='Номер телефона'/>
                                 <textarea className={`modal-form-textarea form-control`} name="" id="" cols="30" rows="10" placeholder='Ваш комментарий'></textarea>
                                 <div className="d-grid">
