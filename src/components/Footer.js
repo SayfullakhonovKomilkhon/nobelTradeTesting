@@ -23,7 +23,7 @@ const Footer = () => {
                     </div>
                     <div className="footer-navigate">
                         <div className="row">
-                            <div className="col-lg-4 col-md-6 col-sm-6 main">
+                            <div className="col-lg-4 col-md-6 col-sm-6">
                                 <img src={footerLogo} alt=""/>
                                 <ul className='navbar'>
                                     <li className='nav-item nav-link'>ГЛАВНАЯ</li>

@@ -36,13 +36,13 @@ const Katalog = () => {
     return (
         <>
             <div className="catalog text-white">
-                <div className="video">
-                    <video src={catalogBgVideo} autoPlay muted loop className='video-bg'/>
-                </div>
                 <header className='header'>
+                    <div className="video">
+                        <video src={catalogBgVideo} autoPlay muted loop className='video-bg'/>
+                    </div>
                     <Navbar/>
                     <div className="header-title">
-                        <h1>NOBEL TRADE</h1>
+                        <h1>NOBEL <span><img className="capsule" src={capsule} alt=""/>TRADE</span></h1>
                         <p className="subtitle">
                             <img src={capsule} alt=""/>
                             работает с более 25 надежными и проверенными поставщиками <br/>  из России и Казахстана,
@@ -51,7 +51,7 @@ const Katalog = () => {
                     </div>
                     <div className="row d-flex
                     justify-content-between">
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 col-sm-12">
                             <div className="catalog-card d-flex justify-content-between align-items-center my-lg-5 p-lg-3">
                                 <p className="subtitle text-white text-left">Осуществляется и собственное производство  на базе
                                     маслоэкстракционного завода “Ecoborn”.  Выпускается 3
@@ -60,8 +60,8 @@ const Katalog = () => {
                                 <img src={headerCard1} alt=""/>
                             </div>
                         </div>
-                        <div className="col-lg-6">
-                            <div className="catalog-card d-flex justify-content-between align-items-center my-lg-5 p-lg-3">
+                        <div className="col-lg-6  col-sm-12">
+                            <div className="catalog-card change-catalog-card d-flex justify-content-between align-items-center my-lg-5 p-lg-3">
                                 <p className="subtitle text-white text-left">По сей день “Nobel Trade” активно развивается  и растет,
                                     открывая новые направления.  Исследует рынок, совершенствует внутреннюю  часть компании и предоставляет
                                     только  проверенный продукт.</p>
@@ -102,19 +102,19 @@ const Katalog = () => {
                             этапов очистки, чем рафинированное масло.
                         </p>
                         <div className="row mt-5 d-flex justify-content-between">
-                            <div className="col-lg-7" data-aos="zoom-out-right">
+                            <div className="col-lg-7 col-md-12 col-sm-12" data-aos="zoom-out-right">
                                 <img src={catalogTopCol7} alt=""/>
                             </div>
-                            <div className="col-lg-5 d-flex flex-column" data-aos="zoom-out-right">
+                            <div className="col-lg-5 col-md-12 col-sm-12 d-flex flex-column" data-aos="zoom-out-right">
                                 <img src={catalogTopCol5} alt=""/>
                                 <div className="row p-0 d-flex
                                 justify-content-between
                                 align-items-center">
-                                    <div className="col-lg-6 pt-2">
+                                    <div className="col-lg-6 col-md-6 col-sm-6 pt-2">
                                         <img className='' src={catalogTopCol12Left} alt=""/>
 
                                     </div>
-                                    <div className="col-lg-6 pt-2 d-flex ">
+                                    <div className="col-lg-6 col-md-6 col-sm-6 pt-2 d-flex ">
                                         <div className="me-2"></div>
                                         <img className="" src={catalogTopCol12Right} alt=""/>
                                     </div>
@@ -144,6 +144,9 @@ const Katalog = () => {
                             Подсолнечное масло не содержит холестерина, поэтому не приносит вреда орзганизму.
                         </p>
                         <div className="row mt-5 d-flex justify-content-between">
+                            <div className="col-lg-7 mobile-edition" data-aos="zoom-out-right">
+                                <img src={catalogBottomCol7} alt=""/>
+                            </div>
                             <div className="col-lg-5 d-flex flex-column">
                                 <div className="row p-0 d-flex
                                 justify-content-between
@@ -158,7 +161,7 @@ const Katalog = () => {
                                 </div>
                                 <img src={catalogBottomCol5} alt=""/>
                             </div>
-                            <div className="col-lg-7" data-aos="zoom-out-right">
+                            <div className="col-lg-7 mobile-hide" data-aos="zoom-out-right">
                                 <img src={catalogBottomCol7} alt=""/>
                             </div>
                         </div>
@@ -169,7 +172,7 @@ const Katalog = () => {
                             КАТАЛОГ ПРОДУКЦИИ
                         </h2>
                         <div className="row">
-                            <div className="col-lg-3 mt-3">
+                            <div className="col-lg-3 col-sm-6 mt-3">
                                 <div className="catalog-card p-3">
                                     <div className="card-img">
                                         <img className='card-korzino' src={korzino} alt=""/>
@@ -184,7 +187,7 @@ const Katalog = () => {
                                 </div>
                             </div>
                             <CatalogModal active={activeModal} setActive={setActiveModal}/>
-                            <div className="col-lg-3 mt-3">
+                            <div className="col-lg-3 col-sm-6 mt-3">
                                 <div className="catalog-card p-3">
                                     <div className="card-img">
                                         <img className='card-korzino' src={korzino} alt=""/>
@@ -198,7 +201,7 @@ const Katalog = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-3 mt-3">
+                            <div className="col-lg-3 col-sm-6 mt-3">
                                 <div className="catalog-card p-3">
                                     <div className="card-img">
                                         <img className='card-korzino' src={korzino} alt=""/>
@@ -212,7 +215,7 @@ const Katalog = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-3 mt-3">
+                            <div className="col-lg-3 col-sm-6 mt-3">
                                 <div className="catalog-card p-3">
                                     <div className="card-img">
                                         <img className='card-korzino' src={korzino} alt=""/>
@@ -228,7 +231,7 @@ const Katalog = () => {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-lg-3 mt-3">
+                            <div className="col-lg-3 col-sm-6 mt-3">
                                 <div className="catalog-card p-3">
                                     <div className="card-img">
                                         <img className='card-korzino' src={korzino} alt=""/>
@@ -242,7 +245,7 @@ const Katalog = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-3 mt-3">
+                            <div className="col-lg-3 col-sm-6 mt-3">
                                 <div className="catalog-card p-3">
                                     <div className="card-img">
                                         <img className='card-korzino' src={korzino} alt=""/>
@@ -256,7 +259,7 @@ const Katalog = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-3 mt-3">
+                            <div className="col-lg-3 col-sm-6 mt-3">
                                 <div className="catalog-card p-3">
                                     <div className="card-img">
                                         <img className='card-korzino' src={korzino} alt=""/>
@@ -270,7 +273,7 @@ const Katalog = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-3 mt-3">
+                            <div className="col-lg-3 col-sm-6 mt-3">
                                 <div className="catalog-card p-3">
                                     <div className="card-img">
                                         <img className='card-korzino' src={korzino} alt=""/>
@@ -286,7 +289,7 @@ const Katalog = () => {
                             </div>
                         </div>
                         <div className="row  pb-5">
-                            <div className="col-lg-3 mt-3">
+                            <div className="col-lg-3 col-sm-6 mt-3">
                                 <div className="catalog-card p-3">
                                     <div className="card-img">
                                         <img className='card-korzino' src={korzino} alt=""/>
@@ -300,7 +303,7 @@ const Katalog = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-3 mt-3">
+                            <div className="col-lg-3 col-sm-6 mt-3">
                                 <div className="catalog-card p-3">
                                     <div className="card-img">
                                         <img className='card-korzino' src={korzino} alt=""/>
@@ -314,7 +317,7 @@ const Katalog = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-3 mt-3">
+                            <div className="col-lg-3 col-sm-6 mt-3">
                                 <div className="catalog-card p-3">
                                     <div className="card-img">
                                         <img className='card-korzino' src={korzino} alt=""/>
@@ -328,7 +331,7 @@ const Katalog = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-3 mt-3">
+                            <div className="col-lg-3 col-sm-6 mt-3">
                                 <div className="catalog-card p-3">
                                     <div className="card-img">
                                         <img className='card-korzino' src={korzino} alt=""/>
@@ -369,7 +372,7 @@ const Katalog = () => {
                                 <img src={catalog3Col7} alt=""/>
                             </div>
                             <div className="col-lg-5 d-flex flex-column" data-aos="zoom-out-right">
-                                <img src={catalog3Col5} alt=""/>
+                                <img className='mobile-hide' src={catalog3Col5} alt=""/>
                                 <div className="row p-0 d-flex
                                 justify-content-between
                                 align-items-center">
@@ -381,23 +384,22 @@ const Katalog = () => {
                                         <img className="pl-1" src={catalog3Col6Right} alt=""/>
                                     </div>
                                 </div>
+                                <img className='mobile-show' src={catalog3Col5} alt=""/>
                             </div>
                         </div>
                     </div>
                     <div className="row d-flex justify-content-around my-5">
                         <div className="col-lg-3 mt-3" data-aos="zoom-out-right">
-                            <div className="col-lg-3 mt-3">
-                                <div className="catalog-card p-3">
-                                    <div className="card-img">
-                                        <img className='card-korzino' src={korzino} alt=""/>
-                                    </div>
-                                    <h3 className="text-center mt-3">Rimado</h3>
-                                    <div className="card-button d-flex align-items-center">
-                                        <button className='btn text-white' type={"button"} onClick={() => setActiveModal(true)}>
-                                            подробнее
-                                        </button>
-                                        <img className='' src={arrow} alt=""/>
-                                    </div>
+                            <div className="catalog-card p-3">
+                                <div className="card-img">
+                                    <img className='card-korzino' src={korzino} alt=""/>
+                                </div>
+                                <h3 className="text-center mt-3">Rimado</h3>
+                                <div className="card-button d-flex align-items-center">
+                                    <button className='btn text-white' type={"button"} onClick={() => setActiveModal(true)}>
+                                        подробнее
+                                    </button>
+                                    <img className='' src={arrow} alt=""/>
                                 </div>
                             </div>
                         </div>
@@ -419,29 +421,30 @@ const Katalog = () => {
                     <div className="catalog-info-section-top">
                         <h2 className="title pt-5 pb-3">
                             <span data-aos="zoom-in">
-                                ХЛОПКОВОЕ 
+                                ПОДСОЛНЕЧНЫЙ 
                             </span>
                             <br/>
                             <span data-aos="zoom-in">
-                                МАСЛО
+                                 ШРОТ
                             </span>
                             <img className="pl-2 mb-1" src={capsuleMini} alt="" data-aos="fade-right"/>
                         </h2>
                         <p className="subtitle pb-3" data-aos="zoom-in">
-                            Хлопковое масло - это особое масло, которое широко распространено в Азиатских странах.
-                            Оно обладает особенным вкусом и большим количеством полезных веществ и элементов.
+                            Шрот - это продукт, получаемый после прессования и экстракции семян масличных культур  при получении реального масла. Шрот незаменим в качестве высокопротеиновой добавки  при производстве комбикормов для животных потому что он содержит клечатку, белки,  витамины B,D, Калий и другие полезные вещества.
                         </p>
                         <p className="subtitle" data-aos="zoom-in">
-                            Такое масло используется при приготовлении восточных блюд и сладостей. Обладает коричневатым оттенком.
+                            Шрот полезен 45%-ым содержанием протеина, а также аминокислотами, которые благотворно  влияют на развитие молодняка. У шрота наименьшее содержание жира, но высокое  содержание протеина.
                         </p>
                         <div className="row mt-5 d-flex justify-content-between">
                             <div className="col-lg-7" data-aos="zoom-out-right">
                                 <img src={catalog4Col7} alt=""/>
                             </div>
                             <div className="col-lg-5 d-flex flex-column" data-aos="zoom-out-right">
-                                <img src={catalog4Col5Top} alt=""/>
                                 <div className="row p-0 ">
-                                    <div className="col-lg-12 p-0 pt-2">
+                                    <div className="col-lg-12 col-sm-12 p-0 ">
+                                        <img src={catalog4Col5Top} alt=""/>
+                                    </div>
+                                    <div className="col-lg-12 col-sm-12 mobile-border p-0 pt-2">
                                         <img src={catalog4Col5Bottom} alt=""/>
                                     </div>
                                 </div>

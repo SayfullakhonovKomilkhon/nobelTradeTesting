@@ -86,7 +86,7 @@
         img {
           width: 102px;
           height: 94.966px;
-          background-image: url("../images/footer-arrow-backgound.png");
+          background-image: url("../images/footer-arrow-backgound.png") !important;
           background-repeat: no-repeat;
           background-size: inherit;
           background-position: center;
@@ -122,6 +122,7 @@
           }
           .navbar {
             display: block;
+            background-color: transparent;
             .nav-item {}
             .nav-link {
               color: #FFF;
