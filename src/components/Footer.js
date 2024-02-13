@@ -7,12 +7,14 @@ import phone from "../images/phone icon.svg";
 import location from "../images/location icon.svg";
 import '../sass/footer.scss'
 import AboutModal from "./AboutModal";
+import {Link} from "react-router-dom";
+import {createBrowserHistory} from "history";
 
 
 
 const Footer = () => {
     const [aboutModal, setAboutModal] = useState(false)
-
+    const history = createBrowserHistory({window});
     return (
         <>
             <footer className='footer'>
@@ -26,17 +28,17 @@ const Footer = () => {
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <img src={footerLogo} alt=""/>
                                 <ul className='navbar'>
-                                    <li className='nav-item nav-link'>ГЛАВНАЯ</li>
-                                    <li className='nav-item nav-link'>О КОМПАНИИ</li>
-                                    <li className='nav-item nav-link'>ПАРТНЕРЫ</li>
-                                    <li className='nav-item nav-link'>НАШИ ПРЕИМУЩЕСТВА</li>
+                                    <li className="nav-item"><Link  to="/" className={` nav-link ${history.location.pathname === "/" ? "active" : ""}`}>ГЛАВНАЯ</Link></li>
+                                    <li className="nav-item" href="#"><Link  to="/aboutCompany" className={` nav-link ${history.location.pathname === "/aboutCompany" ? "active" : ""}`}>О КОМПАНИИ</Link></li>
+                                    <li className="nav-item" href="#"><Link  to="/ourPartners" className={` nav-link ${history.location.pathname === "/ourPartners" ? "active" : ""}`}>ПАРТНЕРЫ</Link></li>
+                                    <li className="nav-item"><Link to="/order" className={`nav-link ${history.location.pathname === "/order" ? "active" : ""}`}>НАШИ ПРЕИМУЩЕСТВА</Link></li>
                                 </ul>
                             </div>
                             <div className="col-lg-2 col-md-6 col-sm-6 main-part">
                                 <ul className='navbar'>
-                                    <li className='nav-item nav-link'>КАТАЛОГ</li>
-                                    <li className='nav-item nav-link'>ВАКАНСИИ</li>
-                                    <li className='nav-item nav-link'>КОНТАКТЫ</li>
+                                    <li className="nav-item"><Link to="/catalog" className={`nav-link ${history.location.pathname === "/catalog" ? "active" : ""}`}>КАТАЛОГ</Link></li>
+                                    <li className="nav-item" href="#"><Link  to="/vacancies" className={` nav-link ${history.location.pathname === "/vacancies" ? "active" : ""}`}>ВАКАНСИИ</Link></li>
+                                    <li className="nav-item" href="#"><Link  to="/" className={` nav-link ${history.location.pathname === "/" ? "active" : ""}`}>КОНТАКТЫ</Link></li>
                                 </ul>
                             </div>
                             <div className="col-lg-6 col-md-12 col-sm-12">

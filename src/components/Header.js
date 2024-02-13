@@ -30,6 +30,25 @@ import carouselCard3 from '../images/carousel-card3.png'
 import carouselCard4 from '../images/carousel-card4.png'
 import carouselCard5 from '../images/carousel-card5.png'
 import ReactPlayer from "react-player";
+import logo1 from '../partnersImg/алтай эко сорт.png'
+import logo2 from '../partnersImg/amylco logo.png'
+import logo3 from '../partnersImg/гудвилл.png'
+import logo4 from '../partnersImg/cargill.png'
+import logo5 from '../partnersImg/бабушкина крынка.png'
+import logo6 from '../partnersImg/молочный 1м.png'
+import part2Logo1 from '../partnersImg/рустарк.png'
+import part2Logo2 from '../partnersImg/агроплюс.png'
+import part2Logo3 from '../partnersImg/русагро.png'
+import part2Logo4 from '../partnersImg/май.png'
+import part2Logo5 from '../partnersImg/ресурс.png'
+import part2Logo6 from '../partnersImg/савушкин.png'
+import part3Logo1 from '../partnersImg/эфко.png'
+import part3Logo2 from '../partnersImg/ppz.png'
+import part3Logo3 from '../partnersImg/юг руси.png'
+import part3Logo4 from '../partnersImg/нью био.png'
+import part3Logo5 from '../partnersImg/шымкентmau.png'
+import cardImg1 from '../partnersImg/ecoborn 1.png'
+import cardImg2 from '../partnersImg/bukhara 1.png'
 
 const Header = () => {
     const [menuActive, setMenuActive] = useState(false)
@@ -225,29 +244,40 @@ const Header = () => {
                             </h2>
                             <div className="row">
                                 <div className="col-lg-12">
-                                    <div className="card-about">
-
+                                    <div className="card-about d-flex justify-content-between align-items-center flex-wrap">
+                                        <img src={logo1} alt=""/>
+                                        <img src={logo2} alt=""/>
+                                        <img src={logo3} alt=""/>
+                                        <img src={logo4} alt=""/>
+                                        <img src={logo5} alt=""/>
+                                        <img src={logo6} alt=""/>
+                                        <img src={part2Logo1} alt=""/>
+                                        <img src={part2Logo2} alt=""/>
+                                        <img src={part2Logo3} alt=""/>
+                                        <img src={part2Logo4} alt=""/>
+                                        <img src={part3Logo2} alt=""/>
+                                        <img src={part2Logo5} alt=""/>
+                                        <img src={part2Logo6} alt=""/>
+                                        <img src={part3Logo1} alt=""/>
+                                        <img src={part3Logo3} alt=""/>
+                                        <img src={part3Logo4} alt=""/>
+                                        <img src={part3Logo5} alt=""/>
                                     </div>
                                 </div>
                             </div>
                             <h3>ДОЧЕРНИЕ КОМПАНИИ</h3>
                             <div className="row">
-                                <div className="col-lg-3 col-md-6">
-                                    <div className="partners-card">
-
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="partners-card d-flex justify-content-center align-items-center">
+                                        <img src={cardImg1} alt=""/>
                                     </div>
                                 </div>
-                                <div className="col-lg-3 col-md-6">
-                                    <div className="partners-card">
-
+                                <div className="col-lg-4 col-md-6 ">
+                                    <div className="partners-card d-flex justify-content-center align-items-center">
+                                        <img src={cardImg2} alt=""/>
                                     </div>
                                 </div>
-                                <div className="col-lg-3 col-md-6">
-                                    <div className="partners-card">
-
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 col-md-6">
+                                <div className="col-lg-4 col-md-12">
                                     <div className="partners-card">
 
                                     </div>

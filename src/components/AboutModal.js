@@ -8,6 +8,7 @@ import Button from '@mui/material/Button';
 import Checkbox from "@mui/material/Checkbox";
 import '../sass/aboutModal.scss'
 import '../sass/applicationModal.scss'
+import exitBtn from "../images/exit-btn.svg";
 
 const AboutModal = ({modalActive,setModalActive}) =>{
     return (
@@ -17,6 +18,7 @@ const AboutModal = ({modalActive,setModalActive}) =>{
                     <div className="modal-content modal-height">
                         <div className="modal-body">
                             <h5 className={`form-modal-title`}>ВВЕДИТЕ ВАШИ ДАННЫЕ ДЛЯ ОТКЛИКА НА ВАКАНСИЮ </h5>
+                            <img className='exit-btn' src={exitBtn} alt="" onClick={() => setModalActive(false)}/>
                             <form action="">
                                 <Accordion className="accordion-position">
                                     <AccordionSummary

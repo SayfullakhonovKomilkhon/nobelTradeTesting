@@ -6,6 +6,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Button from '@mui/material/Button';
 import Checkbox from "@mui/material/Checkbox";
+import exitBtn from "../images/exit-btn.svg"
 
 const ApplicationModal = ({active, setActive}) => {
     return (
@@ -15,6 +16,7 @@ const ApplicationModal = ({active, setActive}) => {
                     <div className="modal-content">
                         <div className="modal-body">
                             <h5 className={`form-modal-title`}>ВВЕДИТЕ ВАШИ ДАННЫЕ ДЛЯ ОБРАТНОЙ СВЯЗИ</h5>
+                            <img className='exit-btn' src={exitBtn} alt="" onClick={() => setActive(false)}/>
                             <form action="">
                                 <Accordion>
                                     <AccordionSummary

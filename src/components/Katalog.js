@@ -26,6 +26,7 @@ import catalog4Col5Top from '../images/catalog4-col-5-top.png'
 import catalog4Col5Bottom from '../images/catalog4-col-5-bottom.png'
 import catalogBgVideo from '../images/catalog-video.mp4'
 import CatalogModal from "./CatalogModal";
+import BasketModal from "./BasketModal";
 
 
 
@@ -33,6 +34,7 @@ import CatalogModal from "./CatalogModal";
 
 const Katalog = () => {
     const [activeModal, setActiveModal] = useState(false)
+    const [activeBasket, setActiveBasket] = useState(false)
     return (
         <>
             <div className="catalog text-white">
@@ -174,8 +176,8 @@ const Katalog = () => {
                         <div className="row">
                             <div className="col-lg-3 col-sm-6 mt-3">
                                 <div className="catalog-card p-3">
-                                    <div className="card-img">
-                                        <img className='card-korzino' src={korzino} alt=""/>
+                                    <div className="card-img" >
+                                        <img className='card-korzino' src={korzino} alt="" onClick={() => setActiveBasket(true)}/>
                                     </div>
                                     <h3 className="text-center mt-3">Rimado</h3>
                                     <div className="card-button d-flex align-items-center">
@@ -388,10 +390,11 @@ const Katalog = () => {
                             </div>
                         </div>
                     </div>
+                    <BasketModal active={activeBasket} setActive={setActiveBasket}/>
                     <div className="row d-flex justify-content-around my-5">
                         <div className="col-lg-3 mt-3" data-aos="zoom-out-right">
                             <div className="catalog-card p-3">
-                                <div className="card-img">
+                                <div className="card-img" onClick={() => setActiveBasket(true)}>
                                     <img className='card-korzino' src={korzino} alt=""/>
                                 </div>
                                 <h3 className="text-center mt-3">Rimado</h3>
