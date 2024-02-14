@@ -2,10 +2,11 @@ import React, {useEffect, useState} from 'react';
 import '../sass/basketModal.scss'
 import arrowImg from "../images/arrow-top-right-large.svg";
 import catalogCard from '../images/catalog-card-1.png'
+import CatalogModal from "./CatalogModal";
 
 const BasketModal = ({active,setActive}) => {
     const [count, setCount] = useState(1)
-
+    const [activeModalInfo, setActiveModalInfo] = useState(false)
     return (
         <>
               <div className={active ? "basket-modal modal active-basket " : "basket-modal modal"} onClick={() => setActive(false)}>
@@ -17,7 +18,10 @@ const BasketModal = ({active,setActive}) => {
                                       <div className="basket-img">
                                           <img src={catalogCard} alt=""/>
                                           <div className="marketing-btn">
-                                            <span>
+                                            <span onClick={() => {
+                                                setActiveModalInfo(true);
+                                                setActive(false)
+                                            }}>
                                                 ВСЯ ИНФОРМАЦИЯ <br/>О ПРОДУКТЕ
                                                 <img src={arrowImg} alt=""/>
                                             </span>
@@ -58,6 +62,7 @@ const BasketModal = ({active,setActive}) => {
                       </div>
                   </div>
               </div>
+            <CatalogModal active={activeModalInfo} setActive={setActiveModalInfo} />
         </>
     );
 };

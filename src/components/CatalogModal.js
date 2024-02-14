@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import catalogModal from '../images/catalog-modal-img.png'
 import arrow from "../images/arrow-top-right-large.svg";
 import '../sass/catalogModal.scss'
+import OrderForm from "./OrderForm";
 const CatalogModal = ({active,setActive}) => {
+    const [orderModal,setOrderModal] = useState(false)
+
     return (
         <>
             <div className={active ? "catalog-modal modal activeCatalog" : "catalog-modal modal"} onClick={() => setActive(false)}>
@@ -28,8 +31,9 @@ const CatalogModal = ({active,setActive}) => {
                                     </div>
                                 </div>
                                 <div className="catalog-body-btn">
-                                    <button className="catalog-body-button btn">ОФОРМИТЬ <br/>ЗАКАЗ <img src={arrow}
-                                                                                                         alt=""/></button>
+                                    <button className="catalog-body-button btn" onClick={() => {
+                                        setOrderModal(true);
+                                    }}>ОФОРМИТЬ <br/>ЗАКАЗ <img src={arrow} alt=""/></button>
                                     <div className="catalog-body-term">
                                         <p className="catalog-body-term-title">Срок хранения: 12 месяцев</p>
                                         <div className="catalog-body-term-block">
@@ -38,6 +42,7 @@ const CatalogModal = ({active,setActive}) => {
                                         </div>
                                     </div>
                                 </div>
+                                <OrderForm active={orderModal} setActive={setOrderModal}/>
                             </div>
                         </div>
                     </div>

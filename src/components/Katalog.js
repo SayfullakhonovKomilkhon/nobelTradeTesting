@@ -27,6 +27,7 @@ import catalog4Col5Bottom from '../images/catalog4-col-5-bottom.png'
 import catalogBgVideo from '../images/catalog-video.mp4'
 import CatalogModal from "./CatalogModal";
 import BasketModal from "./BasketModal";
+import OrderForm from "./OrderForm";
 
 
 
