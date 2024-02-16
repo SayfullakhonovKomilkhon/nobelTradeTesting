@@ -6,6 +6,7 @@ import OrderForm from "./OrderForm";
 const CatalogModal = ({active,setActive}) => {
     const [orderModal,setOrderModal] = useState(false)
 
+
     return (
         <>
             <div className={active ? "catalog-modal modal activeCatalog" : "catalog-modal modal"} onClick={() => setActive(false)}>

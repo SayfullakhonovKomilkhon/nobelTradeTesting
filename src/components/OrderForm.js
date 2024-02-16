@@ -3,7 +3,7 @@ import '../sass/orderForm.scss'
 
 const OrderForm = ({active,setActive}) => {
 
-    const [ count, setCount] = useState(1)
+    const [count, setCount] = useState(1)
     return (
         <>
             <div className={active ? "order-modal modal orderActive" : "order-modal modal"} onClick={() => setActive(false)}>

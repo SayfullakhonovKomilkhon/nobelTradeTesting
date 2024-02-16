@@ -11,6 +11,15 @@ import '../sass/applicationModal.scss'
 import exitBtn from "../images/exit-btn.svg";
 
 const AboutModal = ({modalActive,setModalActive}) =>{
+    const [accordionActive, setAccordionActive] = useState(false)
+    const [accordionTitle, setAccordionTitle] = useState("Тип вакансии")
+    const [acc, setAcc] = useState(document.querySelector("#firstCheckbox"))
+
+    const dataToggle = () => {
+        document.querySelector('#firstCheckbox').classList.add("activate")
+    }
+
+
     return (
         <>
             <div className={ modalActive ?  "active modal" : "modal"} onClick={() => setModalActive(false)}>
@@ -26,13 +35,21 @@ const AboutModal = ({modalActive,setModalActive}) =>{
                                         aria-controls="panel1-content"
                                         id="panel1-header"
                                     >
-                                        Тип вакансии
+                                        {accordionTitle}
                                     </AccordionSummary>
                                     <AccordionDetails>
                                         <ul className="list-group">
                                             <li className="list-group-item">
                                                 <input className="form-check-input me-1" type="checkbox" value=""
-                                                       id="firstCheckbox"/>
+                                                       id="firstCheckbox"
+                                                    // if ((accordionActive == false && accordionTitle == "Тип вакансии") || (accordionActive == true && accordionTitle == "Тип вакансии")) {
+                                                    //     setAccordionTitle("Финансист")
+                                                    // }else if(accordionTitle == "Бухгалтер" || accordionTitle == "Оператор колл-центра") {
+                                                    //     setAccordionTitle('Финансист')
+                                                    // }else {
+                                                    //     setAccordionTitle("Тип вакансии")
+                                                    // }
+                                                />
                                                 <label className="form-check-label" htmlFor="firstCheckbox">Финансист</label>
                                             </li>
                                             <li className="list-group-item">
@@ -43,7 +60,7 @@ const AboutModal = ({modalActive,setModalActive}) =>{
                                             <li className="list-group-item">
                                                 <input className="form-check-input me-1" type="checkbox" value=""
                                                        id="thirdCheckbox"/>
-                                                <label className="form-check-label" htmlFor="thirdCheckbox">Оператор колл-центра </label>
+                                                <label className="form-check-label" htmlFor="thirdCheckbox">Оператор колл-центра</label>
                                             </li>
                                         </ul>
                                     </AccordionDetails>
